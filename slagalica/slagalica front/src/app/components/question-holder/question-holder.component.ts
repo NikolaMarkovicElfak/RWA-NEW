@@ -9,6 +9,8 @@ import { startTimer, stopTimer } from '../../store/timer-quiz-store/timer-quiz.a
 import { Router } from '@angular/router';
 import { Highscore } from '../../models/highscores';
 import { setHighscore } from '../../store/highscore-store/highscore.actions';
+import { User } from '../../models/users';
+import * as jwt_decode from 'jwt-decode';
 
 @Component({
   selector: 'app-question-holder',
@@ -56,7 +58,16 @@ export class QuestionHolderComponent implements OnInit, OnDestroy {
 
   handleHighscore() {
     this.score$.subscribe(score => {
-      const user = JSON.parse(sessionStorage.getItem('user') as string);
+      const token = sessionStorage.getItem('token')
+      if(token){
+      const decodedToken = jwt_decode.jwtDecode(token);
+        console.log(decodedToken);
+        const user: User = {
+          id :Number(decodedToken.sub),
+          username: '',
+          email: '',
+          password: ''
+        }
       const newHighscore: Highscore = {
         user,
         score,
@@ -64,6 +75,7 @@ export class QuestionHolderComponent implements OnInit, OnDestroy {
       };
       this.store.dispatch(stopTimer()); 
       this.store.dispatch(setHighscore({ highscore: newHighscore }));
+    }
     });
   }
 

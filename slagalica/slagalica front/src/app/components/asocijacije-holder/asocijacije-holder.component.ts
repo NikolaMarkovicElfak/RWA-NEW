@@ -10,6 +10,8 @@ import { selectTimeLeft } from '../../store/timer-asocijacije-store/timer-asocij
 import { startTimer, stopTimer } from '../../store/timer-asocijacije-store/timer-asocijacije.actions';
 import { Highscore } from '../../models/highscores';
 import { setHighscore } from '../../store/highscore-store/highscore.actions';
+import * as jwt_decode from 'jwt-decode';
+import { User } from '../../models/users';
 
 @Component({
   selector: 'app-asocijacije-holder',
@@ -51,7 +53,16 @@ export class AsocijacijeHolderComponent implements OnInit, OnDestroy {
 
     const asocijacijaSubscription = this.asocijacija$.subscribe(asocijacija => {
       if (asocijacija.isRevealed) {
-        const user = JSON.parse(sessionStorage.getItem('user') as string);
+        const token = sessionStorage.getItem('token');
+        if(token){
+        const decodedToken = jwt_decode.jwtDecode(token);
+        console.log(decodedToken);
+        const user: User = {
+          id :Number(decodedToken.sub),
+          username: '',
+          email: '',
+          password: ''
+        }
         this.score$.subscribe(score => {
           const newHighscore: Highscore = {
             score: score,
@@ -62,6 +73,7 @@ export class AsocijacijeHolderComponent implements OnInit, OnDestroy {
           this.store.dispatch(setHighscore({ highscore: newHighscore }));
         });
       }
+        }
     });
 
     this.subscriptions.add(userInput$.subscribe(userInputValue => {
