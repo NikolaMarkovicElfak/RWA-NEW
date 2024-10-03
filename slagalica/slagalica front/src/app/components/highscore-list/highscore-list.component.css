@@ -1,0 +1,16 @@
+.highscore-list {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.highscore-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+mat-divider {
+  margin: 10px 0;
+}
+

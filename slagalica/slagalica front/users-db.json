@@ -1,0 +1,281 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "user1@example.com",
+      "password": "password1"
+    },
+    {
+      "id": 2,
+      "email": "user2@example.com",
+      "password": "password2"
+    },
+    {
+      "id": "432f",
+      "email": "luka",
+      "password": "1234"
+    },
+    {
+      "id": "e320",
+      "email": "luka",
+      "password": "luka"
+    }
+  ],
+  "highscores": [
+    {
+      "id": 1,
+      "userId": 1,
+      "gameType": "letters",
+      "score": 1500
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "gameType": "numbers",
+      "score": 1200
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "text": "What is the name of the 1994 film directed by Quentin Tarantino that intertwines the stories of two mob hitmen, a boxer, a gangster's wife, and a pair of bandits?",
+      "answers": [
+        {
+          "text": "Reservoir Dogs",
+          "isCorrect": false
+        },
+        {
+          "text": "Pulp Fiction",
+          "isCorrect": true
+        },
+        {
+          "text": "Jackie Brown",
+          "isCorrect": false
+        },
+        {
+          "text": "Kill Bill",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "In the 1993 movie 'Jurassic Park,' what type of dinosaur was the first to be cloned and shown to the audience?",
+      "answers": [
+        {
+          "text": "Tyrannosaurus Rex",
+          "isCorrect": false
+        },
+        {
+          "text": "Velociraptor",
+          "isCorrect": true
+        },
+        {
+          "text": "Triceratops",
+          "isCorrect": false
+        },
+        {
+          "text": "Brachiosaurus",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "What is the title of the 1995 crime thriller directed by Bryan Singer, which follows the investigation of a mysterious murder that leads to an intricate web of deceit and corruption?",
+      "answers": [
+        {
+          "text": "Reservoir Dogs",
+          "isCorrect": false
+        },
+        {
+          "text": "The Usual Suspects",
+          "isCorrect": true
+        },
+        {
+          "text": "Se7en",
+          "isCorrect": false
+        },
+        {
+          "text": "Heat",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "What is the title of the 1999 science fiction film directed by Lana and Lilly Wachowski that explores the concept of simulated reality?",
+      "answers": [
+        {
+          "text": "Inception",
+          "isCorrect": false
+        },
+        {
+          "text": "The Truman Show",
+          "isCorrect": false
+        },
+        {
+          "text": "The Matrix",
+          "isCorrect": true
+        },
+        {
+          "text": "Dark City",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "In the 1996 film 'Fargo,' directed by Joel and Ethan Coen, what is the name of the pregnant police chief who investigates a series of homicides in Minnesota?",
+      "answers": [
+        {
+          "text": "Marge Gunderson",
+          "isCorrect": true
+        },
+        {
+          "text": "Clarice Starling",
+          "isCorrect": false
+        },
+        {
+          "text": "Jane Craig",
+          "isCorrect": false
+        },
+        {
+          "text": "Ellen Ripley",
+          "isCorrect": false
+        }
+      ]
+    }
+  ],
+  
+  "associations": 
+    {
+      "id": 1,
+      "finalSolution": "Kako sam upoznao vasu majku",
+      "enableInput": false,
+      "isRevealed": false,
+      "columns": [
+        {
+          "id": 1,
+          "columnId": "A",
+          "solution": "Solution A",
+          "isRevealed": false,
+          "revealAllTerms": false,
+          "enableInput": false,
+          "terms": [
+            {
+              "id": 1,
+              "text": "Lopata",
+              "isRevealed": false
+            },
+            {
+              "id": 2,
+              "text": "Srafciger",
+              "isRevealed": false
+            },
+            {
+              "id": 5,
+              "text": "kurac radi",
+              "isRevealed": false
+            },
+            {
+              "id": 6,
+              "text": "test",
+              "isRevealed": false
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "columnId": "B",
+          "solution": "Solution B",
+          "isRevealed": false,
+          "revealAllTerms": false,
+          "enableInput": false,
+          "terms": [
+            {
+              "id": 7,
+              "text": "test",
+              "isRevealed": false
+            },
+            {
+              "id": 8,
+              "text": "test",
+              "isRevealed": false
+            },
+            {
+              "id": 9,
+              "text": "test",
+              "isRevealed": false
+            },
+            {
+              "id": 10,
+              "text": "test",
+              "isRevealed": false
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "columnId": "C",
+          "solution": "Solution C",
+          "isRevealed": false,
+          "revealAllTerms": false,
+          "enableInput": false,
+          "terms": [
+            {
+              "id": 11,
+              "text": "test",
+              "isRevealed": false
+            },
+            {
+              "id": 12,
+              "text": "test",
+              "isRevealed": false
+            },
+            {
+              "id": 13,
+              "text": "test",
+              "isRevealed": false
+            },
+            {
+              "id": 14,
+              "text": "test",
+              "isRevealed": false
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "columnId": "D",
+          "solution": "Solution D",
+          "isRevealed": false,
+          "revealAllTerms": false,
+          "enableInput": false,
+          "terms": [
+            {
+              "id": 15,
+              "text": "test",
+              "isRevealed": false
+            },
+            {
+              "id": 16,
+              "text": "test",
+              "isRevealed": false
+            },
+            {
+              "id": 17,
+              "text": "test",
+              "isRevealed": false
+            },
+            {
+              "id": 18,
+              "text": "test",
+              "isRevealed": false
+            }
+          ]
+        }
+      ]
+    }
+
+}

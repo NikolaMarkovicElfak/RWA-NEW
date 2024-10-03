@@ -1,0 +1,18 @@
+.highscore-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.highscore-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.username, .type, .score {
+  flex: 1;
+  text-align: center;
+}

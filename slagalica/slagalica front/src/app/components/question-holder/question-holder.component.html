@@ -1,0 +1,26 @@
+<div class="score-container">
+  <h4>Score: {{ score$ | async }}</h4>
+  <p>Vreme: {{ timeLeft$ | async }} sekundi</p>
+</div>
+
+<div class="quiz-container" *ngIf="(currentQuestion$ | async) && !(showResult$|async); else resultTemplate">
+  <app-question [question]="(currentQuestion$ | async)?.text"></app-question>
+  <div class="answers">
+    <app-answer
+      *ngFor="let answer of (currentQuestion$ | async)?.answers"
+      [answer]="answer"
+      [selectedAnswer]="selectedAnswer$ | async"
+      (answerClicked)="onAnswerSelected(answer)">
+    </app-answer>
+  </div>
+  <button mat-raised-button color="accent" class="skip-button" (click)="onSkip()">PRESKOČI PITANJE</button>
+</div>
+<ng-template #resultTemplate>
+  <div class="result-container">
+    <h2>Quiz Completed!</h2>
+    <h3>Your final score: {{ score$ | async }}</h3>
+  </div>
+  <h2>Čestitamo! Završili ste ko zna zna!</h2>
+  <button (click)="restartGame()">Igraj ponovo</button>
+  <button (click)="goToHighScores()">Idite na High Scores</button>
+</ng-template>
